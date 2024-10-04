@@ -1,7 +1,7 @@
-let product = 'plate';
-let quantityProduct = '5';
-let category = 'kitchen utensils';
-let price = '200';
+const product = 'plate';
+const quantityProduct = '5';
+const category = 'kitchen utensils';
+const price = '200';
 
 console.log(product);
 console.log(quantityProduct * price +  " Цена заказа");
