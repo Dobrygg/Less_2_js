@@ -1,3 +1,6 @@
+'use strict';
+
+
 const product = 'plate';
 const quantityProduct = '5';
 const category = 'kitchen utensils';
