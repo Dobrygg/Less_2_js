@@ -5,7 +5,7 @@ const quantityProduct = +prompt('Количество товара');
 const category = prompt('Категория товара');
 const price = +prompt('Цена товара');
 
-console.log('На складе ' + quantityProduct + ' единицы товара ' + product + ' на сумму ' + price * +quantityProduct + ' рублей');
+console.log('На складе ' + quantityProduct + ' единицы товара ' + product + ' на сумму ' + price * quantityProduct + ' рублей');
 
 console.log(typeof product);
 console.log(typeof quantityProduct);
