@@ -1,16 +1,22 @@
-'use strict';
+// 'use strict';
 
-const product = prompt('Наименование товара');
-const quantityProduct = +prompt('Количество товара');
-const category = prompt('Категория товара');
-const price = +prompt('Цена товара');
+// const product = prompt('Наименование товара');
+// const quantityProduct = +prompt('Количество товара');
+// const category = prompt('Категория товара');
+// const price = +prompt('Цена товара');
 
-console.log('На складе ' + quantityProduct + ' единицы товара ' + product + ' на сумму ' + price * quantityProduct + ' рублей');
+// if (Number.isFinite(quantityProduct)) {
+//     } else {
+//         console.log ('Вы ввели некорректные данные');
+//     }
 
-console.log(typeof product);
-console.log(typeof quantityProduct);
-console.log(typeof category);
-console.log(typeof price);
+// if (Number.isFinite(price)) {
+// } else {
+//     console.log ('Вы ввели некорректные данные');
+// }    
+
+
+
 
 
 
