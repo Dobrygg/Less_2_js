@@ -1,10 +1,17 @@
 'use strict';
 
-let money = +prompt('Сколько вы зарабатываете');
+const money = +prompt('Сколько вы зарабатываете');
+let moneyRemains = money - 15000;
+let moneyPercentMax = 8950;
+
 if (money <= 15000) {
-    console.log('Ваш подоходный налог = ' + (money / 100 ) * 13)
-    } else if (money >= 15001 && money <= 50000) {
-    console.log('Ваш подоходный налог = ' + ((money / 100 ) * 13 + ((money - 15000) / 100 * 20)))
-    } else if (money >= 50001) {
-    console.log('Ваш подоходный налог = ' + ((money / 100 ) * 13 + ((money - 50000) / 100 * 30)))
+    console.log(`Ваш подоходный налог = ${(money * 0.13)}`);
+} 
+
+if (money <= 50000) {
+    console.log(`Ваш подоходный налог = ${((money - moneyRemains) * 0.13) + (moneyRemains * 0.2)}`);
+}
+
+if (money > 50000) {
+    console.log(`Ваш подоходный налог = ${(moneyPercentMax + ((money - 50000) * 0.3))}`);
 }

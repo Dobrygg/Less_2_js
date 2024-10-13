@@ -5,15 +5,12 @@ const quantityProduct = +prompt('Количество товара');
 const category = prompt('Категория товара');
 const price = +prompt('Цена товара');
 
-if (Number.isFinite(quantityProduct)) {
-    } else {
-        console.log ('Вы ввели некорректные данные');
-    }
-
-if (Number.isFinite(price)) {
+if (quantityProduct / 1 === quantityProduct && price / 1 === price) {
 } else {
     console.log ('Вы ввели некорректные данные');
-}    
+}
+
+
 
 
 
