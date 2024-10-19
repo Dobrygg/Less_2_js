@@ -1,9 +1,9 @@
 'use strict';
 
-function getMoney(euro, dollars) {
-    const rubEuro = euro * 1.2;
-    const rubDollar = dollars * 73;
-    return console.log(rubEuro, rubDollar) ;
+function getMoney(euro) {
+    const euroDollar = euro * 1.2;
+    const dollRub = euroDollar * 73;
+    alert(dollRub);
 }
 
-getMoney (4, 15);
+getMoney (2);

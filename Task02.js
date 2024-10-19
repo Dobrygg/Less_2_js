@@ -2,7 +2,8 @@
 
 function createWords () {
     const words = prompt('Введите слово' + '');
-    console.log(words[0].toUpperCase() + words.slice(1));
+    const wordsTrim = words.trim();
+    alert(wordsTrim.replace(/^./, wordsTrim[0].toUpperCase()));
 }
 
 createWords ();
