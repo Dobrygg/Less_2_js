@@ -16,4 +16,4 @@ function calculate(total, product, promoCode) {
     return total;
 }
 
-calculate(32000, 11, "METHED");
+console.log(calculate(32000, 11, "METHED")); // Функция с заданными параметрами.

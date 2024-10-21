@@ -1,10 +1,10 @@
 'use strict';
 
-let word = '  привет мир'
+const word = '  привет Мир'
 
-function createWords (  word) {
+function createWords(word) {
     const wordsTrim = word.trim();
-    return wordsTrim.replace(/^./, wordsTrim[0].toUpperCase());
+    return wordsTrim.replace(/^./, wordsTrim[0].toUpperCase(), wordsTrim[1].toLowerCase);
 }
 
-createWords( word);
+console.log(createWords( word)); // Функция с заданными параметрами.
