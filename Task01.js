@@ -6,4 +6,4 @@ function getMoney(euro) {
     return dollRub;
 }
 
-console.log (getMoney(2)); // Функция с заданными параметрами.
+console.log(`Сумма покупки ${getMoney(2)} рублей`); 

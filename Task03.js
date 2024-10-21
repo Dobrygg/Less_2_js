@@ -16,4 +16,4 @@ function calculate(total, product, promoCode) {
     return total;
 }
 
-console.log(calculate(32000, 11, "METHED")); // Функция с заданными параметрами.
+console.log(`Сумма покупри с учетом всех скидок равна ${calculate(32000, 11, "METHED")} рублей`); 
