@@ -1,19 +1,30 @@
 'use strict';
 
-function calculate(total, product, promoCode) {
-    if (product > 10) {
-        total = total - (total * 0.03);
+const word = '  привЕт МИр';
+
+function createWords(word) {
+    const wordsTrim = word.trim();
+    const line = wordsTrim[0].toUpperCase() + wordsTrim.slice(1).toLowerCase();
+    let lineRev = "";
+    for (let i = line.length; i >= 0; i -= 1) {
+        lineRev += line[i];
     }
-    if (total > 30000) {
-        total = total  - ((total - 30000) * 0.15);
-    }
-    if (promoCode === "METHED") {
-        total = total - (total * 0.1);
-    }
-    if (promoCode === "G3H2Z1" && total > 2000) {
-        total = total - 500;
-    }
-    return total;
+    return lineRev;
 }
 
-console.log(`Сумма покупри с учетом всех скидок равна ${calculate(32000, 11, "METHED")} рублей`); 
+console.log(createWords(word));
+
+//Без цикла
+// function createWords(word) {
+//     const wordsTrim = word.trim();
+//     const line = wordsTrim[0].toUpperCase() + wordsTrim.slice(1).toLowerCase();
+//     const lineRev = line.split("").reverse().join("");
+//     return lineRev;
+// }
+
+// console.log(createWords(word));
+
+
+
+
+
