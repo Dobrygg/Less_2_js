@@ -10,3 +10,13 @@ function createWords(word) {
 }
 
 console.log(createWords(word));
+
+
+
+//Короткий вариант
+// function createWords(word) {
+//     const wordsTrim = word.trim();
+//     return wordsTrim[0].toUpperCase() + wordsTrim.slice(1).toLowerCase()
+// }
+
+// console.log(createWords(word));
