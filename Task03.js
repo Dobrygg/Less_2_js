@@ -3,8 +3,7 @@
 const word = '  Привет мир';
 
 function createWords(word) {
-    const lineRev = word.trim().split("").reverse().join("");
-    return lineRev;
+    return word.trim().split("").reverse().join("");
 }
 
 console.log(createWords(word));
