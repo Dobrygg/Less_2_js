@@ -1,21 +1,22 @@
 'use strict'; 
 
 {
-    const number = 11;
-
     function isPrime(number) {
-        for (let i = 2; i < number; i++) {
-            if (number % i === 0) return console.log(false);
+        if (number <= 1) {
+        return false;
         }
-        return console.log(true);
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) return false;
+        }
+        return true;
     }
-    isPrime(number);
+    console.log(isPrime(11));
 }
 
 // Какое простое число не выдает 2-ая функция??
 
 {
-    const number = 829;
+    const number = 5003;
 
     function isPrime(number) {
         const even = number / 2;
