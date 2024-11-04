@@ -4,13 +4,18 @@ const allStudents = ["Иванов","Петров","Сидоров","Кузне�
 const failedStudents = ['Сидоров', 'Смирнов', 'Попов'];
 
 function filter(allStudents, failedStudents) {
-    const indexes = [0, 1, 3, 6];
-    const result = indexes.map(index => allStudents[index]);
-
+    const result = [];
+    for (let i = 0; i < allStudents.length; i += 1) {
+        if (!failedStudents.includes(allStudents[i])) {
+            result.push(allStudents[i]);
+        }
+    }
+    
     return result;
 }
 
 console.log(filter(allStudents, failedStudents));
+
 
 
 
