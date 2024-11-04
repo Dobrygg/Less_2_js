@@ -1,17 +1,13 @@
 'use strict';
 
-const word = '  Привет мир';
+const names = ['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'Michael', 'Alexander'];
 
-function createWords(word) {
-    return word.trim().split("").reverse().join("");
+function addPrefix(names) {
+    const newNames = [];
+    for(let i = 0; i < names.length; i +=1) {
+        newNames[i] = (`Mr ${names[i]}`);
+    }
+    return newNames;
 }
-
-console.log(createWords(word));
-
-
-
-
-
-
-
+console.log(addPrefix(names));
 

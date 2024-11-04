@@ -1,43 +1,13 @@
 'use strict'; 
 
-{
-    const number = 11;
+const allCashbox = [4500, 3210, 650, 1250, 7830, 990, 13900, 370];
 
-    function isPrime(number) {
-        for (let i = 2; i < number; i++) {
-            if (number % i === 0) return console.log(false);
-        }
-        return console.log(true);
+function getAverageValue(arr) {
+    let n = 0;
+    for(let i = 0; i < arr.length; i += 1) {
+        n += arr[i];
     }
-    isPrime(number);
+    return Math.floor(n / arr.length);
 }
 
-// Какое простое число не выдает 2-ая функция??
-
-{
-    const number = 829;
-
-    function isPrime(number) {
-        const even = number / 2;
-        const odd = number / 3;
-        const five = number / 5;
-        const seven = number / 7;
-        if (number < 0) {
-            return console.log(false);
-        }
-        if (number === 1 || number === 2 || number === 3 || number === 5) {
-            return isPrime();
-        }   else {
-            return console.log(even !== parseInt(even) && odd !== parseInt(odd) && five !== parseInt(five) && seven !== parseInt(seven));
-        }
-    }
-
-    isPrime(number);
-
-}
-
-
-
-
-
-
+console.log(getAverageValue(allCashbox));
