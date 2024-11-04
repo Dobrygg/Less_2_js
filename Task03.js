@@ -4,9 +4,11 @@ const names = ['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'M
 
 function addPrefix(names) {
     const newNames = [];
-    for(let i = 0; i < names.length; i +=1) {
+
+    for (let i = 0; i < names.length; i +=1) {
         newNames[i] = (`Mr ${names[i]}`);
     }
+
     return newNames;
 }
 console.log(addPrefix(names));
