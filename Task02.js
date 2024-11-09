@@ -1,15 +1,30 @@
 'use strict'; 
 
-const allCashbox = [4500, 3210, 650, 1250, 7830, 990, 13900, 370];
+const count = 20;
 
-function getAverageValue(arr) {
-    let n = 0;
-
-    for (let i = 0; i < arr.length; i += 1) {
-        n += arr[i];
+function runNumbers(count, m, n) {
+    const result = [];
+    const range = Math.abs(m - n) + 1;
+    const min = Math.min(n, m);
+    const max = Math.max(n, m);
+    let i = 0;
+    while ( i < count) {
+        i += 1;
+        result[i] = Math.floor((Math.random() * range) + min);
     }
-
-    return Math.floor(n / arr.length);
+    
+    return result;
 }
 
-console.log(getAverageValue(allCashbox));
+console.log(runNumbers(count, 20, 30));
+
+
+
+
+
+
+
+
+
+
+

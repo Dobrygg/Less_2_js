@@ -1,21 +1,90 @@
 'use strict';
 
-const allStudents = ["Иванов","Петров","Сидоров","Кузнецов","Смирнов", "Попов", "Соколов"];
-const failedStudents = ['Сидоров', 'Смирнов', 'Попов'];
+const count = 10;
 
-function filter(allStudents, failedStudents) {
+function runNumbers(count) {
     const result = [];
-    for (let i = 0; i < allStudents.length; i += 1) {
-        if (!failedStudents.includes(allStudents[i])) {
-            result.push(allStudents[i]);
-        }
+    let i = 0;
+    while (i < count) {
+        i += 1;
+        result[i] = Math.floor(Math.random() * 43);
     }
     
     return result;
 }
 
-console.log(filter(allStudents, failedStudents));
+console.log(runNumbers(count));
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const runNumber = Math.floor((Math.random() + 1) * 10);
+// console.log(runNumber);
+
+// function runNumbers(runNumber) {
+//     const runIndex = [];
+//     for (let i = 0; i < runNumber; i += 1) {
+//         runIndex[i] = i;
+//     }
+//     for (let n = 0; n < runNumber; n += 1) {
+//         console.log(runIndex[n] = + Math.floor((Math.random() * 43)));
+//     }
+    
+//     return runIndex;
+// }
+
+// runNumbers(runNumber);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function number(runNum) {
+//     let strike = prompt('Угадайте загаданное число');   
+//     for (let i = 0; i > -1; i +=1) {
+//         let strike = prompt('Угадайте загаданное число');
+//         if (isNaN(strike)) {
+//             alert('Введите число');
+//         }
+//         if (runNum > strike) {
+//             alert('Загаданное число больше вашего');
+//         }
+//         if (runNum < strike) {
+//             alert('Загаданное число меньше вашего');
+//         }
+        
+//         if (runNum === strike) {
+//             alert('Вы угадали число');
+//         }
+//     }
+
+// }
+
+// number(runNum);
 
 
 
