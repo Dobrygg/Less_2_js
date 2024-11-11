@@ -1,6 +1,7 @@
 'use strict';
 
 function runNumbers(count, m, n) {
+    let resultMass = [];
     const numsEven = [];
     const numsOdd = [];
     const result = [];
@@ -17,8 +18,9 @@ function runNumbers(count, m, n) {
             numsOdd.push(result[i]); 
         }
     }
-    console.log("even:", numsEven); 
-    console.log("odd:", numsOdd);
+    
+    return resultMass = ["even:", ...numsEven, "odd:", ...numsOdd];
+
 }
 
-runNumbers(7, 10, 22);
+console.log(runNumbers(7, 10, 22));
