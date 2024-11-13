@@ -1,30 +1,25 @@
 'use strict';
 
 function ranNumbers(count, m, n, parity ) {
-    const even = [];
-    const odd = [];
     const result = [];
     const min = Math.min(n, m);
     const max = Math.max(n, m);
     while (result.length < count) {
-      result.length++;
-        const randomNum = Math.floor(Math.random() * (Math.max(n, m) - Math.min(n, m) + 1) + min);
-        console.log(randomNum);
+        const randomNum = Math.floor(Math.random() * (max - min + 1) + min);
         if (randomNum % 2 === 0 && parity ==='even') { 
           result.push(randomNum);
         } 
-        if (randomNum % 2 === 1 && parity ==='odd') {
+        if (randomNum % 2 !== 0 && parity ==='odd') {
           result.push(randomNum);
         } 
         if (parity === undefined) {
           result.push(randomNum);
         }  
           
-      }
+    }
 
-
-      return result;
+    return result;
 }
 
 
-console.log(ranNumbers(7, -5, 6, 'even'));
+console.log(ranNumbers(99, -10, 10, 'odd'));
