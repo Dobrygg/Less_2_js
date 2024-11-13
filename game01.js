@@ -1,31 +1,34 @@
 'use strict'
 
-const runNum = Math.floor((Math.random() * 100) + 1);
+function game() {
+    const ranNum = Math.floor((Math.random() * 100) + 1);
+    let answer;
 
-function game(runNum) {
-    let playerNum;
     do { 
-        playerNum = prompt('Введите число');
+        answer = prompt('Введите число от 1 до 100');
 
-        switch (runNum !== playerNum) {
-            case playerNum === null:
+        switch (true) {
+            case answer === null:
                 alert("Игра завершена.");
-                return; 
-            case isNaN(playerNum):
-                alert('Введите число');
                 break;
-            case runNum > playerNum:
+            case isNaN(answer):
+            case +answer > 100:
+            case +answer < 1:
+                alert('Нужно ввести число от 1 до 100');
+                break;
+            case ranNum > answer:
                 alert('Загаданное число больше вашего');
                 break;
-            case runNum < playerNum:
+            case ranNum < answer:
                 alert('Загаданное число меньше вашего');
                 break;
-            case runNum === Number(playerNum):
+            default:
                 alert(`Правильно`);
-                return runNum; 
         }
         
-    } while (runNum !== playerNum); 
+    } while (ranNum !== Number(answer) && answer !== null); 
+
+    return ranNum;
 }
 
-console.log(game(runNum));
+console.log(game());
