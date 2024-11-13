@@ -1,6 +1,6 @@
 'use strict';
 
-function runNumbers(count, m, n, parity ) {
+function ranNumbers(count, m, n, parity ) {
     const even = [];
     const odd = [];
     const result = [];
@@ -27,4 +27,4 @@ function runNumbers(count, m, n, parity ) {
 }
 
 
-console.log(runNumbers(7, -5, 6, 'even'));
+console.log(ranNumbers(7, -5, 6, 'even'));
