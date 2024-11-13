@@ -26,7 +26,7 @@ function game() {
                 alert(`Правильно`);
         }
         
-    } while (ranNum !== Number(answer) && answer !== null); 
+    } while (ranNum !== +answer && answer !== null); 
 
     return ranNum;
 }
