@@ -1,26 +1,30 @@
 'use strict';
 
-function runNumbers(count, m, n) {
-    let resultMass = [];
-    const numsEven = [];
-    const numsOdd = [];
+function runNumbers(count, m, n, parity ) {
+    const even = [];
+    const odd = [];
     const result = [];
-    const range = Math.abs(m - n) + 1;
     const min = Math.min(n, m);
     const max = Math.max(n, m);
-    let i = 0;
-    while (i < count) {
-        i += 1;
-        result[i] = Math.floor((Math.random() * range) + min);
-        if (result[i] % 2 === 0) { 
-            numsEven.push(result[i]); 
-        } else { 
-            numsOdd.push(result[i]); 
-        }
-    }
-    
-    return resultMass = ["even:", ...numsEven, "odd:", ...numsOdd];
+    while (result.length < count) {
+      result.length++;
+        const randomNum = Math.floor(Math.random() * (Math.max(n, m) - Math.min(n, m) + 1) + min);
+        console.log(randomNum);
+        if (randomNum % 2 === 0 && parity ==='even') { 
+          result.push(randomNum);
+        } 
+        if (randomNum % 2 === 1 && parity ==='odd') {
+          result.push(randomNum);
+        } 
+        if (parity === undefined) {
+          result.push(randomNum);
+        }  
+          
+      }
 
+
+      return result;
 }
 
-console.log(runNumbers(7, 10, 22));
+
+console.log(runNumbers(7, -5, 6, 'even'));
