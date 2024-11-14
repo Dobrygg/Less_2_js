@@ -1,7 +1,5 @@
 'use strict';
 
-const count = 10;
-
 function runNumbers(count) {
     const result = [];
     let i = 0;
@@ -13,7 +11,7 @@ function runNumbers(count) {
     return result;
 }
 
-console.log(runNumbers(count));
+console.log(runNumbers(10));
 
 
 

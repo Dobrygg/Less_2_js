@@ -1,7 +1,5 @@
 'use strict'; 
 
-const count = 20;
-
 function runNumbers(count, m, n) {
     const result = [];
     const range = Math.abs(m - n) + 1;
@@ -16,7 +14,7 @@ function runNumbers(count, m, n) {
     return result;
 }
 
-console.log(runNumbers(count, 20, 30));
+console.log(runNumbers(4, 20, 30));
 
 
 
