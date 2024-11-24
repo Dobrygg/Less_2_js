@@ -24448,8 +24448,8 @@ const listIPv4 = [
     "10.0.32.20"
 ];
 
-function getListIpv4() {
-    const newArr = new Set(listIPv4);
+function getListIpv4(arr) {
+    const newArr = new Set(arr);
 
     return newArr.size;
 }
