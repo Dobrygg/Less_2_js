@@ -1,12 +1,9 @@
 'use strict'
 
 function game() {
-    const ranNum = Math.floor((Math.random() * 100) + 1);
-    let answer;
-
-    do { 
-        answer = prompt('Введите число от 1 до 100');
-
+    const ranNum = Math.floor((Math.random() * 10) + 1);
+    let answer = prompt('Введите число от 1 до 100'); 
+    if (ranNum !== +answer && answer !== null) {
         switch (true) {
             case answer === null:
                 alert("Игра завершена.");
@@ -22,13 +19,13 @@ function game() {
             case ranNum < answer:
                 alert('Загаданное число меньше вашего');
                 break;
-            default:
-                alert(`Правильно`);
+            };
+            game (); 
         }
-        
-    } while (ranNum !== +answer && answer !== null); 
-
+    if (ranNum === +answer) {
+        alert(`Правильно ${ranNum}`);
+    } 
     return ranNum;
-}
+};
 
-console.log(game());
+game();
