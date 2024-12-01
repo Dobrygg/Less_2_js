@@ -5,9 +5,9 @@ function game() {
     const answer = prompt('Введите число от 1 до 100'); 
     {
         switch (true) {
-            case ranNum === +answer:
-                alert(`Правильно! ${ranNum}`);
-                return;
+            case answer === null:
+                alert("Игра завершена.");
+                return; 
             case isNaN(answer):
             case +answer > 100:
             case +answer < 1:
@@ -19,14 +19,13 @@ function game() {
             case ranNum < answer:
                 alert('Загаданное число меньше вашего');
                 break;
-            case answer === null:
-                alert("Игра завершена.");
-                return; 
+            default:
+                alert(`Правильно ${ranNum}`);
+                return;
         }
             game (); 
         
-        } 
-        
+        };
     return ranNum;
 };
 
