@@ -1,31 +1,35 @@
 'use strict'
 
 const foo = function()  {
-    const rectangle = {
-        height: 5,
-        weight: 5,
+    const _rectangle = {
+        _height: 5,
+        _width: 5,
+        
         setHeight(newHeight) {
-            this.height = +newHeight;
+            this._height = +newHeight;
         },
+        
         setWeight(newWeight) {
-            this.weight = +newWeight;
+            this._width = +newWeight;
         },
+        
         get perimeter() {
-            return 2 * (this.height + this.weight) + ' см';
+            return 2 * (this._height + this._width) + ' см';
         },
+        
         get square() {
-            return this.height * this.weight + ' см';
+            return this._height * this._width + ' см';
         }
     }
-    return rectangle;
+    return _rectangle;
 };
 
 const myRectangle = foo();
 console.log(myRectangle);
-console.log(myRectangle.setHeight(11));
+console.log(myRectangle.setHeight(6));
 console.log(myRectangle.perimeter);
 console.log(myRectangle.square);
-console.log(myRectangle);
+console.log();
 
 
 

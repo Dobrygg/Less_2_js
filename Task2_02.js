@@ -7,12 +7,20 @@ const cart = {
   count: 0,
   totalPrice: 0,
   discount: 0,
+
   calculateltemPrice() {
-    let totalPrice = this.items.reduce((sum, item) =>
+    this.items.reduce((sum, item) =>
       sum + item.price * item.quantity, 0);
-    totalPrice -= (totalPrice * this.discount) / 100;
-    return this.totalPrice = totalPrice;
+
   },
+
+  getTotalPrice() {
+    let total = this.items.reduce((sum, item) =>
+      sum + item.price * item.quantity, 0);
+    total -= (total * this.discount) / 100;
+    return total;
+  },
+
   add(name, price, quantity = 1) {
     const newItems = {
       name,
@@ -22,18 +30,22 @@ const cart = {
     this.items.push(newItems);
     this.increaseCount(quantity);
   },
+
   increaseCount(num) {
     this.count += num;
   },
+
   clear() {
     this.items = [];
     this.totalPrice = 0;
     this.count = 0;
     this.discount = 0;
   },
+
   print() {
     console.log(JSON.stringify(this.items));
   },
+
   setDiscount(promocode) {
     this.discount = 0;
     if (promocode === this.METHED) {
@@ -42,14 +54,20 @@ const cart = {
     if (promocode === this.NEWYEAR){
         this.discount = 21
     };
-    this.calculateltemPrice();
   }
 };
 
 cart.add('banan', 5, 0);
 cart.add('mango', 4, 0);
 cart.add('qiwi', 1, 100);
-cart.print();
-cart.setDiscount(cart.METHED);
 console.log(cart.calculateltemPrice());
+console.log(cart.print());
+console.log(cart.getTotalPrice());
+cart.setDiscount(cart.METHED);
+console.log(cart.getTotalPrice());
+console.log(cart.print());
+cart.total = 100;
+console.log(cart.getTotalPrice());
+console.log(cart.print());
+
 
