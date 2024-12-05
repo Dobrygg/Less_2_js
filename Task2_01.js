@@ -24,12 +24,12 @@ const foo = function()  {
     return _rectangle;
 };
 
-const myRectangle = foo();
-console.log(myRectangle);
-console.log(myRectangle.setHeight(6));
-console.log(myRectangle.perimeter);
-console.log(myRectangle.square);
-console.log();
+// const myRectangle = foo();
+// console.log(myRectangle);
+// console.log(myRectangle.setHeight(6));
+// console.log(myRectangle.perimeter);
+// console.log(myRectangle.square);
+// console.log();
 
 
 
