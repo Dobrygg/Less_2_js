@@ -3,13 +3,13 @@
 const cart = {
   items: [],
   count: 0,
-  discount: 0,
-  METHED: 'METHED',
-  NEWYEAR:'NEWYEAR',
+  _discount: 0,
+  METHED: "METHED",
+  NEWYEAR: "NEWYEAR",
   calculateltemPrice() {
     let summer = this.items.reduce((sum, item) =>
       sum + item.price * item.quantity, 0);
-    summer -= (summer * this.discount) / 100;
+    summer -= (summer * this._discount) / 100;
     return summer;
   },
 
@@ -41,21 +41,23 @@ const cart = {
     console.log(JSON.stringify(this.items));
   },
 
-  _discount(promocode) {
-    if (promocode === "METHED") {
-      this.discount = 15;
+  methed(METHED) {
+    if (cart._discount = "METHED") {
+      this._discount = 15;
     };
-    if (promocode === 'NEWYEAR') {
-      this.discount = 21;
+  },
+
+  newyear(NEWYEAR) {
+    if (cart._discount = "NEWYEAR") {
+      this._discount = 21;
     };
   }
 };
 
-cart.add('banan', 5, 2);
-cart.add('mango', 4, 1);
+cart.add('banan', 5, 0);
+cart.add('mango', 4, 0);
 cart.add('qiwi', 1, 10);
 cart.print();
-
-cart._discount(cart.NEWYEAR);
+cart.newyear();
 console.log(cart.totalPrice);
 
